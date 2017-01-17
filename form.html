@@ -1,0 +1,18 @@
+<form [ngFormModel]="form">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label class="control-label" for="username"> Username</label>l
+                <input class="form-control" type="text" id="username" ngControl="username" #username="ngForm">
+            </div>
+            <div *ngIf = "!username.valid" class="alert alert-danger">
+                <strong>Username is required</strong>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="password"> Password </label>l
+                <input class="form-control" type="password" id="password" ngControl="password" #password="ngForm">
+            </div>
+        </div>
+    </div>
+</form>
